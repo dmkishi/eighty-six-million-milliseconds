@@ -4,3 +4,14 @@
   font-family: 'Hiragino Mincho Pro W6';
   src: url('/fonts/HiraMinProN-W3-AlphaNum-01-SUBSET.woff2') format('woff2');
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  font: 24vw/1 'Hiragino Mincho Pro W6', 'Hiragino Mincho Pro';
+}
