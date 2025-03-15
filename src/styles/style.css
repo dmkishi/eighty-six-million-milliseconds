@@ -1,1 +1,6 @@
 @import url('reset.css') layer(reset);
+
+@font-face {
+  font-family: 'Hiragino Mincho Pro W6';
+  src: url('/fonts/HiraMinProN-W3-AlphaNum-01-SUBSET.woff2') format('woff2');
+}
