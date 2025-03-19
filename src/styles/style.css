@@ -25,9 +25,9 @@ main {
     }
 
     /**
-     * Unselectable texts are always an anti-pattern but arguably the clock is
-     * not an interactive UI element and this prevents inadvertent and
-     * distracting text highlights.
+     * Unselectable texts are always an anti-pattern but, given the impossibly
+     * high animation speed, the clock is arguably not an interactive UI element
+     * and this prevents inadvertent and distracting text highlights.
      */
     user-select: none;
   }
