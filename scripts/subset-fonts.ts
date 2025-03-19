@@ -35,7 +35,7 @@ function convertByteToMb(bytes: number): string {
   return mb.toFixed(2);
 }
 
-const fontFilePaths = await glob('src/fonts/**/*.{ttf,otf,woff,woff2}');
+const fontFilePaths = await glob('src/fonts/japanese/**/*.{ttf,otf,woff,woff2}');
 const filteredFontFilePaths = fontFilePaths.filter(filePath => {
   return !path.parse(filePath).name.match(/-SUBSET$/);
 });
