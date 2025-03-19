@@ -15,24 +15,24 @@ main {
   container-type: inline-size;
   max-width: 1500px;
   margin: 0 auto;
-}
 
-#clock {
-  --textBlockMargin: 3.5cqw;
-  --textBlockWidth: calc(100cqw - var(--textBlockMargin) * 2);
-  --fontSize3: calc(var(--textBlockWidth) / 3);
-  --fontSize4: calc(var(--textBlockWidth) / 4.05);
-  margin: var(--textBlockMargin);
-  font: var(--fontSize3) / 1 'Hiragino Mincho Pro W6', 'Hiragino Mincho Pro';
+  p {
+    --textBlockMargin: 3.5cqw;
+    --textBlockWidth: calc(100cqw - var(--textBlockMargin) * 2);
+    --fontSize3: calc(var(--textBlockWidth) / 3);
+    --fontSize4: calc(var(--textBlockWidth) / 4.05);
+    margin: var(--textBlockMargin);
+    font: var(--fontSize3) / 1 'Hiragino Mincho Pro W6', 'Hiragino Mincho Pro';
 
-  @media (width > 450px) {
-    font-size: var(--fontSize4);
+    @media (width > 450px) {
+      font-size: var(--fontSize4);
+    }
+
+    /**
+     * Unselectable texts are always an anti-pattern but arguably the clock is
+     * not an interactive UI element and this prevents inadvertent and
+     * distracting text highlights.
+     */
+    user-select: none;
   }
-
-  /**
-   * Unselectable texts are always an anti-pattern but arguably the clock is not
-   * an interactive UI element and this prevents inadvertent and distracting
-   * text highlights.
-   */
-  user-select: none;
 }
