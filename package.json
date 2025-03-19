@@ -8,7 +8,7 @@
     "dev": "vite --host --open",
     "build": "tsc && vite build",
     "build:fonts": "node --experimental-strip-types scripts/subset-fonts.ts",
-    "preview": "vite preview"
+    "preview": "vite preview --open"
   },
   "devDependencies": {
     "@types/subset-font": "^2.3.0",
