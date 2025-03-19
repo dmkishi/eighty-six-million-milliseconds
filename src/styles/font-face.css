@@ -5,3 +5,13 @@
   font-family: 'Hiragino Mincho Pro W6';
   src: url('/fonts/japanese/HiraMinProN-W3-AlphaNum-01-SUBSET.woff2') format('woff2');
 }
+
+/**
+ * Source: <https://fonts.googleapis.com/css?family=Inconsolata>, specifically
+ * the Latin set. This version is smaller than the one found on Github at
+ * <https://github.com/googlefonts/Inconsolata>, 13 KB vs 39 KB.
+ */
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/fonts/Inconsolata-Regular.woff') format('woff');
+}

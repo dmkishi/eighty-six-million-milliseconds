@@ -32,3 +32,21 @@ main {
     user-select: none;
   }
 }
+
+aside {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(235 235 240 / 90%);
+  box-shadow: 0 1px 6px 1px rgb(0 0 0 / 6%);
+  backdrop-filter: blur(10px);
+
+  h1,
+  p {
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+    font-size: 12.5px;
+    font-weight: normal;
+  }
+}
