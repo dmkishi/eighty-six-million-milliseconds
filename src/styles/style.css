@@ -1,9 +1,5 @@
+@import url('font-face.css') layer(font-face);
 @import url('reset.css') layer(reset);
-
-@font-face {
-  font-family: 'Hiragino Mincho Pro W6';
-  src: url('/fonts/japanese/HiraMinProN-W3-AlphaNum-01-SUBSET.woff2') format('woff2');
-}
 
 html,
 body {
