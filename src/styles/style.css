@@ -20,8 +20,20 @@ main {
     margin: var(--textBlockMargin);
     font: var(--fontSize3) / 1 'Hiragino Mincho Pro W6', 'Hiragino Mincho Pro';
 
+    /**
+     * The text block height is static to prevent layout and scrollbar jitters
+     * when the kanji character count at times rapidly alternates. Between 0 and
+     * 86,000,000, the greatest kanji count is 15, e.g.
+     * "八千五百八十八万八千八百八十八".
+     *
+     * - Across 3 columns, it would span 5 rows.
+     * - Across 4 columns, it would span 4 rows.
+     */
+    height: calc(var(--fontSize3) * 5);
+
     @media (width > 450px) {
       font-size: var(--fontSize4);
+      height: calc(var(--fontSize4) * 4);
     }
 
     /**
