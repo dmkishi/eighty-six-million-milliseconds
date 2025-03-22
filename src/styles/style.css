@@ -9,31 +9,42 @@ body {
 
 main {
   container-type: inline-size;
-  max-width: 1500px;
-  margin: 0 auto;
 
   p {
-    --textBlockMargin: 3.5cqw;
-    --textBlockWidth: calc(100cqw - var(--textBlockMargin) * 2);
-    --fontSize3: calc(var(--textBlockWidth) / 3);
-    --fontSize4: calc(var(--textBlockWidth) / 4.05);
-    margin: var(--textBlockMargin);
-    font: var(--fontSize3) / 1 'Hiragino Mincho Pro W6', 'Hiragino Mincho Pro';
-
     /**
      * The text block height is static to prevent layout and scrollbar jitters
      * when the kanji character count at times rapidly alternates. Between 0 and
      * 86,000,000, the greatest kanji count is 15, e.g.
      * "八千五百八十八万八千八百八十八".
      *
-     * - Across 3 columns, it would span 5 rows.
-     * - Across 4 columns, it would span 4 rows.
+     * - Across 3 columns, the clock may span 5 rows.
+     * - Across 4 columns, the clock may span 4 rows.
+     * - Across 5 columns, the clock may span 3 rows.
+     * - Across 6 columns, the clock may span 3 rows.
      */
-    height: calc(var(--fontSize3) * 5);
+    --margin: 3.5cqw;
+    --contentWidth: calc(100cqw - var(--margin) * 2);
+    --oneThird: calc(var(--contentWidth) / 3);
+    --oneFourth: calc(var(--contentWidth) / 4.05);
+    --oneFifth: calc(var(--contentWidth) / 5.05);
+    --oneSixth: calc(var(--contentWidth) / 6.05);
+    margin: var(--margin);
+    font: var(--oneThird) / 1 'Hiragino Mincho Pro W6', 'Hiragino Mincho Pro';
+    height: calc(var(--oneThird) * 5);
 
     @media (width > 450px) {
-      font-size: var(--fontSize4);
-      height: calc(var(--fontSize4) * 4);
+      font-size: var(--oneFourth);
+      height: calc(var(--oneFourth) * 4);
+    }
+
+    @media (width > 1150px) {
+      font-size: var(--oneFifth);
+      height: calc(var(--oneFifth) * 3);
+    }
+
+    @media (width > 1600px) {
+      font-size: var(--oneSixth);
+      height: calc(var(--oneSixth) * 3);
     }
 
     /**
