@@ -22,7 +22,7 @@ main {
      * - Across 5 columns, the clock may span 3 rows.
      * - Across 6 columns, the clock may span 3 rows.
      */
-    --margin: 3.5cqw;
+    --margin: calc(1cqw * log(2));
     --contentWidth: calc(100cqw - var(--margin) * 2);
     --oneThird: calc(var(--contentWidth) / 3);
     --oneFourth: calc(var(--contentWidth) / 4.05);
