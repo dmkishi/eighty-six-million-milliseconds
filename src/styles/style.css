@@ -61,8 +61,8 @@ aside {
   bottom: 0;
   width: 100%;
   padding: 1rem;
-  background-color: rgb(235 235 240 / 90%);
-  box-shadow: 0 1px 6px 1px rgb(0 0 0 / 6%);
+  background-color: rgb(235 235 241 / 90%);
+  box-shadow: 0 1px 6px 1px rgb(0 0 1 / 6%);
   backdrop-filter: blur(10px);
 
   h1,
